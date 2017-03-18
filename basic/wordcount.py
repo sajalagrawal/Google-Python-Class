@@ -44,7 +44,14 @@ import sys
 # You could write a helper utility function that reads a file
 # and builds and returns a word/count dict for it.
 # Then print_words() and print_top() can just call the utility function.
-"""def sorted(iterable, key=None, reverse=False):
+"""
+def _count():
+    i = 0
+    while 1:
+        yield i
+        i += 1
+        
+def sorted(iterable, key=None, reverse=False):
     'Drop-in replacement for the sorted() built-in function (excluding cmp())'
     'if using python 2 instead of python 3'
     seq = list(iterable)
@@ -57,7 +64,8 @@ import sys
         seq = map(lambda decorated: decorated[2], seq)
     if reverse:
         seq.reverse()
-    return seq"""
+    return seq
+"""
 ###
 def word_count_dict(filename):
     """Returns a word/count dict for this filename."""
