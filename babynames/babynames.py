@@ -36,7 +36,12 @@ Suggested milestones for incremental development:
  -Build the [year, 'name rank', ... ] list and print it
  -Fix main() to use the extract_names list
 """
-
+def _count():
+    i = 0
+    while 1:
+        yield i
+        i += 1
+      
 def sorted(iterable, key=None, reverse=False):
     'Drop-in replacement for the sorted() built-in function (excluding cmp())'
     'if using python 2 instead of python 3'
